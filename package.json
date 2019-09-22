@@ -1,22 +1,22 @@
 {
     "name": "owp.feedback",
     "description": "Feedback notifications",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
+    "scripts": {},
+    "keywords": [
+        "feedback",
+        "Open Web Project",
+        "owp"
+    ],
+    "author": "Andreas Arvidsson",
+    "license": "MIT",
+    "homepage": "https://github.com/AndreasArvidsson/OpenWebProject-Feedback",
     "repository": {
         "type": "git",
         "url": "https://github.com/AndreasArvidsson/OpenWebProject-Feedback.git"
     },
-    "keywords": [
-        "feedback"
-    ],
-    "author": "Andreas Arvidsson",
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/AndreasArvidsson/OpenWebProject-Feedback/issues"
-    },
-    "homepage": "https://github.com/AndreasArvidsson/OpenWebProject-Feedback"
+    }
 }

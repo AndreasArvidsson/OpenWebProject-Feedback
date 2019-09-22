@@ -1,6 +1,6 @@
 # OpenWebProject Feedback
 
-## Feedback notifications
+**Feedback notifications**
 
 ## Installation
 `npm install owp.feedback --save`
