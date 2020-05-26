@@ -1,9 +1,11 @@
 {
     "name": "owp.feedback",
     "description": "Feedback notifications",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "start": "webpack-dev-server --config test/webpack.config.js --port 9090 --open"
+    },
     "keywords": [
         "feedback",
         "Open Web Project",
@@ -18,5 +20,18 @@
     },
     "bugs": {
         "url": "https://github.com/AndreasArvidsson/OpenWebProject-Feedback/issues"
+    },
+    "devDependencies": {
+        "webpack": "latest",
+        "webpack-cli": "latest",
+        "webpack-dev-server": "latest",
+        "html-webpack-plugin": "latest",
+        "babel-loader": "latest",
+        "css-loader": "latest",
+        "mini-css-extract-plugin": "latest",
+        "@babel/core": "latest",
+        "eslint-loader": "latest",
+        "eslint": "latest",
+        "babel-eslint": "latest"
     }
 }

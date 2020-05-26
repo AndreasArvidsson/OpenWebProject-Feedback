@@ -45,11 +45,26 @@ fdbInner.appendChild(fdbSpinner);
 
 function setMessage(message) {
     fdbMessage.innerHTML = message;
+    if (message) {
+        fdbMessage.style.display = "block";
+    }
+    else {
+        fdbMessage.style.display = "none";
+    }
 }
 
 function setFeedbackClass(className) {
     feedbackClass = className
     fdbInner.className = "fdb-inner " + className;
+}
+
+function setRole(type) {
+    if (type === "error" || type === "warn") {
+        fdbInner.setAttribute("role", "alert");
+    }
+    else {
+        fdbInner.setAttribute("role", "status");
+    }
 }
 
 function setIsActive(isActive) {
@@ -65,9 +80,11 @@ function setIsLoading(loading) {
     isLoading = loading;
     if (loading) {
         fdbSpinner.style.display = "block";
+        fdbInner.setAttribute("aria-label", "Loading");
     }
     else {
         fdbSpinner.style.display = "none";
+        fdbInner.removeAttribute("aria-label");
     }
 }
 
@@ -121,6 +138,7 @@ const Feedback = {
 
         setMessage(message);
         setFeedbackClass(types[options.type] + " fdb-expand");
+        setRole(options.type);
         setIsLoading(false);
         setIsActive(true);
 
@@ -135,6 +153,7 @@ const Feedback = {
 
         setMessage("");
         setFeedbackClass(types.neutral + " fdb-loading");
+        setRole("neutral");
         setIsLoading(true);
         setIsActive(true);
     },
@@ -144,8 +163,8 @@ const Feedback = {
 };
 
 for (let type in types) {
-    Feedback[type] = function(message, userOpt) {
-        this.notify(message, {...userOpt, type: type});
+    Feedback[type] = function (message, userOpt) {
+        Feedback.notify(message, { ...userOpt, type: type });
     }
 }
 
