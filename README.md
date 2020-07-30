@@ -2,6 +2,9 @@
 
 **Feedback notifications**
 
+## Try it
+https://andreasarvidsson.github.io/OpenWebProject-Feedback/
+
 ## Installation
 `npm install owp.feedback --save`
 
